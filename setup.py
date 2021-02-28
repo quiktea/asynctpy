@@ -3,7 +3,7 @@ import versioneer
 
 with open("requirements.txt", "r") as fh:
     requirements = [line.strip() for line in fh]
-    print(requirements)
+    #print(requirements)
 
 setuptools.setup(
     name="asynctpy",
