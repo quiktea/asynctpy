@@ -12,7 +12,6 @@ setuptools.setup(
     author_email="wishymovies@gmail.com",
     description="An async lib for Tenor's GIF API written in Python",
     long_description="An async lib for Tenor's GIF API written in Python",
-    long_description_content_type="text",
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
