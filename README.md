@@ -26,5 +26,5 @@ async def foo():
 
 ```
 
-[7]: http://www.simpleimageresizer.com/_uploads/photos/945e92f8/dlogo_25.png
+[7]: http://www.simpleimageresizer.com/_uploads/photos/945e92f8/dlogo_1_10.png
 [8]: https://discord.gg/jHt3qrNxyk
