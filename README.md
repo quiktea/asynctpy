@@ -1,7 +1,7 @@
 # asynctpy
 An asynchronous wrapper for the Tenor API written in Python
 
-[![Discord][7]][8]
+[![Discord][7]]
 
 Getting Started:
 Simply run the following command within your terminal (a PyPi release is coming soon):
@@ -38,5 +38,5 @@ Coming Soon:
 - Some Utils
 - Something to remove unecessary characters within a search term
 
-[7]: http://www.simpleimageresizer.com/_uploads/photos/945e92f8/dlogo_1_10.png
-[8]: https://discord.gg/jHt3qrNxyk
+
+[7]: https://discord.gg/jHt3qrNxyk
