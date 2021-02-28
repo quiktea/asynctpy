@@ -28,7 +28,7 @@ class AsyncTPY():
     @classmethod
     async def random_many(cls, search_term : str, results : int, limit : int = 8) -> list:
         if limit < results:
-            raise ValueError("limit must not be smalled than results value")
+            raise ValueError("limit must not be smaller than results value")
         url = "https://g.tenor.com/v1/search?q=%s&key=%s&limit=%s" % (search_term, cls.api_key, limit)
         async with aiohttp.ClientSession() as session:
             async with session.get(url) as response:

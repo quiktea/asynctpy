@@ -1,6 +1,8 @@
 import setuptools
 import versioneer
 
+with open("README.md", "r") as fh:
+    long_description = fh.read()
 with open("requirements.txt", "r") as fh:
     requirements = [line.strip() for line in fh]
     #print(requirements)
@@ -12,7 +14,7 @@ setuptools.setup(
     author="quiktea",
     author_email="wishymovies@gmail.com",
     description="An async lib for Tenor's GIF API written in Python",
-    long_description="An async lib for Tenor's GIF API written in Python",
+    long_description=long_description,
     long_description_content_type="text/x-rst",
     packages=setuptools.find_packages(),
     classifiers=[
