@@ -26,5 +26,5 @@ async def foo():
 
 ```
 
-[7]: https://media.discordapp.net/attachments/773312837623218247/815605976845516840/discord-logo-logodownload-download-logotipos-1.png
+[7]: https://media.discordapp.net/attachments/773312837623218247/815606365653303296/dlogo.png
 [8]: https://discord.gg/jHt3qrNxyk
