@@ -39,7 +39,7 @@ Coming Soon:
 - Something to remove unecessary characters within a search term
 
 
-<iframe src="https://discord.com/widget?id=815602429532962836&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+
 
 [8]: https://discord.com/api/guilds/815602429532962836/widget.json
 [7]: https://discord.gg/jHt3qrNxyk
