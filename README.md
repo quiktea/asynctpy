@@ -19,4 +19,9 @@ async def foo():
   data = await tenor.random("cats", limit = 10) #gets 10 gifs and chooses a random one out of them
   print(data)
 
+#get more than one random gif
+async def foo():
+    data = await tenor.random_many("cats", 8, limit = 10) #gets 10 gifs and chooses 8 random ones from them
+    print(data)
+
 ```
