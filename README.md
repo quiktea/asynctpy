@@ -1,7 +1,7 @@
 # asynctpy
 An asynchronous wrapper for the Tenor API written in Python
 
-
+[![Discord][7]][8]
 Basic Usage:
 ```py
 from asynctpy import AsyncTPY
@@ -25,3 +25,6 @@ async def foo():
     print(data)
 
 ```
+
+
+[8]: https://discord.gg/jHt3qrNxyk
