@@ -53,6 +53,11 @@ class AsyncTPY():
     @classmethod
     async def destroy_instance(cls):
         await cls.session.close()
+        cls.session = None
+        cls.api_key = None
+        del cls.session
+        del cls.api_key
+
         
 
 

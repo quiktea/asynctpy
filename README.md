@@ -31,6 +31,11 @@ async def foo():
     data = await tenor.random_many("cats", 8, limit = 10) #gets 10 gifs and chooses 8 random ones from them
     print(data)
 
+#close the aiohttp.ClientSession()
+async def foo():
+  await tenor.destroy_instance()
+  
+
 ```
 
 Coming Soon:
