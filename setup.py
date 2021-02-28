@@ -3,6 +3,7 @@ import versioneer
 
 with open("requirements.txt", "r") as fh:
     requirements = [line.strip() for line in fh]
+    print(requirements)
 
 setuptools.setup(
     name="asynctpy",
@@ -20,5 +21,5 @@ setuptools.setup(
         "Operating System :: OS Independent",
     ],
     python_requires=">=3.6",
-    install_requires=requirements,
+    install_requires="aiohttp",
 )
