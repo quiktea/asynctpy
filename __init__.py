@@ -1,7 +1,5 @@
 import aiohttp
-import asyncio
 import random
-loop = asyncio.get_event_loop()
 class AsyncTPY():
     api_key = None
 
@@ -43,13 +41,4 @@ class AsyncTPY():
                     returned_results.remove(entry)
                 
                 return return_list
-
-
-
-                        
-
-
-
-
-
 
