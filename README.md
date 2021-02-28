@@ -3,6 +3,12 @@ An asynchronous wrapper for the Tenor API written in Python
 
 [![Discord][7]][8]
 
+Getting Started:
+Simply run the following command within your terminal (a PyPi release is coming soon):
+```
+pip install git+https://github.com/quiktea/asynctpy.git
+```
+
 Basic Usage:
 ```py
 from asynctpy import AsyncTPY
