@@ -41,5 +41,5 @@ Coming Soon:
 
 
 
-[8]: https://discordapp.com/api/guilds/815602429532962836/widget.png?style=shield
-[7]: https://discord.gg/jHt3qrNxyk
+[8]: https://discord.gg/jHt3qrNxyk
+[7]: https://discordapp.com/api/guilds/815602429532962836/widget.png?style=shield
