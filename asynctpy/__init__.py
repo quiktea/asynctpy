@@ -1,14 +1,13 @@
 import aiohttp
 import random
-import asyncio
-
-async def create_session():
-    async with aiohttp.ClientSession() as session:
-        return session
 
 
 class AsyncTPY():
     api_key = None
+
+    async def __init__(self):
+        print("initialising")
+    
         
 
     @classmethod
@@ -52,13 +51,3 @@ class AsyncTPY():
                 return return_list
 
 
-tenor = AsyncTPY()
-tenor.create_instance("LIVDSRZULELA")
-
-
-async def main():
-    data = await tenor.search("cats")
-    print(data)
-
-
-asyncio.get_event_loop().run_until_complete(main())
