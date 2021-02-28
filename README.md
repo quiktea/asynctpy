@@ -27,5 +27,10 @@ async def foo():
 
 ```
 
+Coming Soon:
+- Reusing one `aiohttp.ClientSession()` instead of just creating a new one every time
+- Some Utils
+- Something to remove unecessary characters within a search term
+
 [7]: http://www.simpleimageresizer.com/_uploads/photos/945e92f8/dlogo_1_10.png
 [8]: https://discord.gg/jHt3qrNxyk

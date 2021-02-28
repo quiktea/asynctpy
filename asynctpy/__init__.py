@@ -1,7 +1,15 @@
 import aiohttp
 import random
+import asyncio
+
+async def create_session():
+    async with aiohttp.ClientSession() as session:
+        return session
+
+
 class AsyncTPY():
     api_key = None
+        
 
     @classmethod
     def create_instance(cls, token : str):
@@ -13,6 +21,7 @@ class AsyncTPY():
         async with aiohttp.ClientSession() as session:
             async with session.get(url) as response:
                 data = await response.json()
+                
                 return data
 
     @classmethod
@@ -42,3 +51,14 @@ class AsyncTPY():
                 
                 return return_list
 
+
+tenor = AsyncTPY()
+tenor.create_instance("LIVDSRZULELA")
+
+
+async def main():
+    data = await tenor.search("cats")
+    print(data)
+
+
+asyncio.get_event_loop().run_until_complete(main())
