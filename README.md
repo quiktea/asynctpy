@@ -2,6 +2,7 @@
 An asynchronous wrapper for the Tenor API written in Python
 
 [![Discord][7]][8]
+
 Basic Usage:
 ```py
 from asynctpy import AsyncTPY
