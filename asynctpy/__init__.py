@@ -1,14 +1,8 @@
 import aiohttp
 import random
 
-
 class AsyncTPY():
     api_key = None
-
-    async def __init__(self):
-        print("initialising")
-    
-        
 
     @classmethod
     def create_instance(cls, token : str):
@@ -20,7 +14,6 @@ class AsyncTPY():
         async with aiohttp.ClientSession() as session:
             async with session.get(url) as response:
                 data = await response.json()
-                
                 return data
 
     @classmethod
