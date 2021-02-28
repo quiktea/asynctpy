@@ -51,16 +51,5 @@ class AsyncTPY():
 
 
 
-tenor = AsyncTPY()
-tenor.create_instance("LIVDSRZULELA")
 
-async def main():
-    data = await tenor.random_many("cats", 2, limit = 1)
-    print(data)
-    print(len(data))
-
-
-
-loop.run_until_complete(main())
-    
 
