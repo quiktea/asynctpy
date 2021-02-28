@@ -26,5 +26,5 @@ async def foo():
 
 ```
 
-
+[7]: https://raw.githubusercontent.com/python-discord/branding/master/logos/badge/badge_github.svg
 [8]: https://discord.gg/jHt3qrNxyk
