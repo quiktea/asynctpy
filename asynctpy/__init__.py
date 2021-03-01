@@ -2,43 +2,42 @@ import aiohttp
 import asyncio
 import random
 import warnings
+from utils.stringcleaner import clean_string
 warnings.filterwarnings("ignore", category=DeprecationWarning) #aiohttp.ClientSession() requires you to create a session within an async context manager.
 #To use one session, we cannot do this, so we are just going to ignore the warning :)
 
 class AsyncTPY():
-    api_key = None
-    session = None #created within create_instance()
-
+    
+    def __init__(self, token : str):
+        self.api_key = token
+        self.session = aiohttp.ClientSession(raise_for_status=True)
     
     
-    @classmethod
-    def create_instance(cls, token : str):
-        cls.api_key = token
-        cls.session = aiohttp.ClientSession(raise_for_status=True)
+    
 
-    @classmethod
-    async def search(cls, search_term : str, limit : int = 8) -> dict:
-        url = "https://g.tenor.com/v1/search?q=%s&key=%s&limit=%s" % (search_term, cls.api_key, limit)
-        async with cls.session.get(url) as response:
+    async def search(self, search_term : str, limit : int = 8) -> dict:
+        search_term = await clean_string(search_term)
+        url = "https://g.tenor.com/v1/search?q=%s&key=%s&limit=%s" % (search_term, self.api_key, limit)
+        async with self.session.get(url) as response:
             data = await response.json()
-            await cls.session.close()
+            await self.session.close()
             return data
 
-    @classmethod
-    async def random(cls, search_term : str, limit : int = 8) -> dict:
-        url = "https://g.tenor.com/v1/search?q=%s&key=%s&limit=%s" % (search_term, cls.api_key, limit)
-        async with cls.session.get(url) as response:
+    async def random(self, search_term : str, limit : int = 8) -> dict:
+        search_term = await clean_string(search_term)
+        url = "https://g.tenor.com/v1/search?q=%s&key=%s&limit=%s" % (search_term, self.api_key, limit)
+        async with self.session.get(url) as response:
             data = await response.json()
             results = data["results"]
             entry = random.choice(results)
             return entry
 
-    @classmethod
-    async def random_many(cls, search_term : str, results : int, limit : int = 8) -> list:
+    async def random_many(self, search_term : str, results : int, limit : int = 8) -> list:
         if limit < results:
             raise ValueError("limit must not be smaller than results value")
-        url = "https://g.tenor.com/v1/search?q=%s&key=%s&limit=%s" % (search_term, cls.api_key, limit)
-        async with cls.session.get(url) as response:
+        search_term = await clean_string(search_term)
+        url = "https://g.tenor.com/v1/search?q=%s&key=%s&limit=%s" % (search_term, self.api_key, limit)
+        async with self.session.get(url) as response:
             data = await response.json()
             returned_results = data["results"]
             return_list = []
@@ -50,17 +49,12 @@ class AsyncTPY():
             return return_list
 
 
-    @classmethod
-    async def destroy_instance(cls):
-        await cls.session.close()
-        cls.session = None
-        cls.api_key = None
-        del cls.session
-        del cls.api_key
+    async def destroy_instance():
+        await self.session.close()
+        self.session = None
+        self.api_key = None
+        del self.session
+        del self.api_key
 
         
-
-
-
-
 
