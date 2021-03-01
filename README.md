@@ -39,7 +39,7 @@ async def foo():
 ```
 
 Coming Soon:
-- Reusing one `aiohttp.ClientSession()` instead of just creating a new one every time
+- ~~Reusing one `aiohttp.ClientSession()` instead of just creating a new one every time~~ Done
 - Some Utils
 - Something to remove unecessary characters within a search term
 
