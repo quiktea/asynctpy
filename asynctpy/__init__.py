@@ -7,7 +7,7 @@ warnings.filterwarnings("ignore", category=DeprecationWarning) #aiohttp.ClientSe
 
 class AsyncTPY():
     api_key = None
-    session = None #created within __init__
+    session = None #created within create_instance()
 
     
     
