@@ -20,7 +20,6 @@ class AsyncTPY():
         url = "https://g.tenor.com/v1/search?q=%s&key=%s&limit=%s" % (search_term, self.api_key, limit)
         async with self.session.get(url) as response:
             data = await response.json()
-            await self.session.close()
             return data
 
     async def random(self, search_term : str, limit : int = 8) -> dict:
